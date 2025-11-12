@@ -1,0 +1,203 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0a0a1a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* --- HERO CON SFONDO STELLATO --- */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Contenuto centrale */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #0a0a1a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #e6c200;
+}
+
+/* --- STELLE IRREGOLARI --- */
+.stars-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  background: transparent;
+  background-image: 
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 2px, transparent 2px),
+    radial-gradient(white 0.5px, transparent 0.5px);
+  background-repeat: repeat;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Strati di stelle con spazi diversi */
+.stars-small {
+  background-size: 60px 60px;
+  animation: moveStars 120s linear infinite;
+  opacity: 0.5;
+}
+
+.stars-medium {
+  background-size: 100px 100px;
+  animation: moveStars 200s linear infinite;
+  opacity: 0.7;
+}
+
+.stars-large {
+  background-size: 150px 150px;
+  animation: moveStars 300s linear infinite;
+  opacity: 0.9;
+}
+
+/* Movimento */
+@keyframes moveStars {
+  from { transform: translate3d(0,0,0); }
+  to { transform: translate3d(-800px, -1000px, 0); }
+}
+
+/* --- SEZIONE STELLE --- */
+.stars-section {
+  background-color: #0f0f1f;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.stars-section h2 {
+  color: #ffd700;
+  margin-bottom: 2rem;
+}
+
+.star-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.star {
+  width: 300px;
+  background-color: #1a1a2e;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.star:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+}
+
+.star img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #0a0a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.stelle-page {
+  position: relative;
+  z-index: 5;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.stelle-page .intro {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  color: #ddd;
+}
